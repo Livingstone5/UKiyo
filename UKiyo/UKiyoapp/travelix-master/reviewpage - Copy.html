@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="reviewupload" method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        <center>
+    <h1><b>REVIEW</b></h1>
+    
+    <h4>Write your Review</h4>
+    <textarea rows="10" cols="80" id="review" name="review"></textarea>
+    <h4>Upload your Photo</h4>
+    <input type="file" name="image" class="input" value="Upload a Photo"><br><br>
+    Enter name:<input type="text" name="applicant" class="input"/>
+    <div class="group">
+        <input type="submit" class="input" id="btn" value="Submit"><br><br>
+    </form>
+            
+    <form action="displayRvw">
+        {% csrf_token %}
+    <input type="submit" value="Your Reviews"><br></a>
+</form>
+
+        
+    </div>
+
+    </center>
+       
+
+</body>
+</html>

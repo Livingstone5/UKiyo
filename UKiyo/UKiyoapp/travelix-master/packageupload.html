@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PACKAGE UPLOADING.......</h1>
+    <form action="packageupload" method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        <div>
+            <h5>PACKAGE DETAILS </h5>
+        
+        <label>Image</label>
+        <input type="file" name="image"><br><br>
+        <label>Title</label>
+        <input type="text" id="title" name="title"><br><br>
+        <label>Name(same as username)</label>
+        <input type="text" id="company" name="company"><br><br>
+        <label>Name of TravelAgency</label>
+        <input type="text" id="name" name="Travelagency"><br><br>
+        <label>Name of TravelAgency</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label>Price</label>
+        <input type="number" id="price" name="price"><br><br>
+        <label>Description</label>
+        <input type="text" id="description" name="description"><br><br>
+        <label>Duration</label>
+        <input type="text" id="duration" name="duration"><br><br>
+        <label>meals included or not</label>
+        <select id="meals" name="meals">
+            <option value="included">meals included</option>
+            <option value="not included">meals not included</option></select><br><br>
+        <label>accommodation included or not</label>
+        <select id="accommodation" name="accommodation">
+            <option value="included">accommodation included</option>
+            <option value="not included">accommodation not included</option></select><br><br>
+        <label>Place of accommodation</label>
+        <input type="text" id="placeofa" name="placeofa"><br><br>
+        <label>Available Dates</label>
+        <input type="date" id="dates" name="dates"><br><br>
+        <label>Admission fee included or not</label>
+        <select id="admission" name="admission">
+            <option value="included">Admission fee included</option>
+            <option value="not included ">Admission fee not included</option></select><br><br>
+        <label>Help Number</label>
+        <input type="number" id="helpno" name="helpno"><br><br>
+        <label>Cancel Date</label>
+        <input type="date" id="canceldate" name="canceldate"><br><br>
+        <label>Additional Information</label>
+        <input type="text" id="additionalinfo" name="additionalinfo"><br><br>
+        <label>Starting Point</label>
+        <input type="text" id="startpoint" name="startpoint"><br><br>
+        <label>Place1</label>
+        <input type="text" id="place1" name="place1"><br><br>
+        <label>Place2</label>
+        <input type="text" id="place2" name="place2"><br><br>
+        <label>Place3</label>
+        <input type="text" id="place3" name="place3"><br><br>
+
+        <input type="submit" name="btn1" value="Upload"><br><br>
+    </form>
+    <form action="displayPac">
+        {%csrf_token%}
+        <a href="displayPac"><input type="submit" value="Display"></a><br>
+        {% for x in midata %}
+        {{x.name}}
+        {{x.service}}
+        {{x.daysoftour}}
+        {{x.typeoftour}}
+        {% endfor %}
+    </form>
+</body>
+</html>

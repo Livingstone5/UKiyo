@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>single listing</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style5.css">
+  <link rel="stylesheet" href="single_listing_styles.css">
+  <link rel="stylesheet" href="single_listing_responsive.css">
+
+
+
+    <style>
+nav {
+  background-color: black;
+  color: #000000;
+}
+
+      p
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 2;
+	font-weight: 400;
+  color: #000000;
+  padding: 2px 60px 2px 60px;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+
+h1{font-size: 48px; font-weight: 600; margin-left: 40px;}
+h2{font-size: 36px; font-weight: 600; margin-left: 40px;}
+h3{font-size: 24px;}
+/* h4{font-size: 18px;} */
+h5{font-size: 14px;}
+h1, h2, h3, h5, h6
+{
+	font-family: 'Open Sans', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+h4{
+  margin-left: 60px;
+  font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	line-height: 2;
+	font-weight: 600;
+	color: #131212;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+h5{
+  margin-left: 60px;
+  font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	line-height: 2;
+  font-weight: 600;
+  margin-right: 80px;
+	color: #0e0d0d;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+
+button {
+    color: #000000;
+    background-color: #FFFFFF;
+    font-weight: 100;
+    height: 45px;
+    padding: 10px 30px;
+    width: 20%;
+    border-radius: 40px;
+    border-block-color:#56d8e4 ;
+    border: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1.3px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+    -webkit-box-shadow: 0px 0px 0px 2px #56d8e4;
+    box-shadow: 0px 0px 0px 2px #56d8e4;
+}
+
+button:hover,
+butto:focus {
+    opacity: 0.9;
+    color: #FFFFFF;
+    background-color: #56d8e4;
+}
+
+      label{
+        width: 500px;
+        display: inline-block;
+      }
+
+
+      .copyright
+{
+	background: #685677;
+}
+.copyright_content
+{
+	height: 52px;
+}
+.copyright_content div
+{
+	font-size: 12px;
+	font-weight: 600;
+	color: #685677;
+}
+.footer_nav_container
+{
+	height: 52px;
+}
+.footer_nav
+{
+	
+}
+.footer_nav_list
+{
+	font-size: 0px;
+}
+.footer_nav_item
+{
+	display: inline-block;
+	margin-right: 40px;
+}
+.footer_nav_item a
+{
+	font-size: 12px;
+	font-weight: 600;
+	color: #685677;
+	text-transform: uppercase;
+	line-height: 2;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.footer_nav_item a:hover
+{
+	color: #FFFFFF;
+}
+     
+      </style>
+</head>
+
+<body>
+
+
+
+  
+      <nav class="navbar sticky-top navbar-dark bg-black">
+      <a class="navbar-brand" href="#">LOGO</a>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  
+        <div class="container justify-content-left">
+          
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+           </button></div>
+      
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            
+            <li class="nav-item active">
+              <a class="nav-link" href="home.html">HOME    <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">BRAND<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">TOUR   <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">CONTACT <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+    
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                MORE  </a>
+              
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">FEATURES</a>
+                <a class="dropdown-item" href="#">SETTINGS</a>
+                <a class="dropdown-item" href="#">OTHERS</a>
+              </div>
+            </li><br>
+            <li  class="nav-item active">
+              <div class="nav-link">
+            <div class="iconscontainer">
+              <div class="icons">
+               <div class="icon"><i class="bi bi-search"></i></div>
+       
+              </div>
+          </div>
+        </div>
+        </li>
+            </li>
+            
+          </ul>
+         
+        </div>
+    
+      </nav>
+    </nav>
+    
+     
+      <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"> -->
+        <!-- Indicators -->
+        <!-- <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol> -->
+        <!-- Wrapper for slides -->
+        <!-- <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="pexels-pok-rie-249519.jpg" width="1000px" height="350px" data-color="lightblue" alt="First Image">
+            <div class="carousel-caption d-md-block">
+              <h5>L A</h5>
+              <P>Even though the traffic was a mess, we had the best time playing at Venice Beach.</P>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="static/images/drops.jpg" width="1000px" height="350px" data-color="firebrick" alt="Second Image">
+            <div class="carousel-caption d-md-block">
+              <h5>L A</h5>
+              <P>Even though the traffic was a mess, we had the best time playing at Venice Beach.</P>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="night_steert.jpg" width="1000px" height="350px" data-color="violet" alt="Third Image">
+            <div class="carousel-caption d-md-block">
+              <h5>L A</h5>
+              <P>Even though the traffic was a mess, we had the best time playing at Venice Beach.</P>
+            </div>
+          </div>
+        </div>
+        <!-- Controls -->
+        <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+      </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+      </a>
+      </div><br><br><br> -->
+
+     
+         
+      <br><br><br><br><br>
+    {% for x in midata%}
+
+      <div class="container">
+      
+        <!-- <h4>WIN CAFE</h4>
+        <h6>bangkok,thailand</h6> -->
+          <!-- <div class="row"> -->
+        <h2 class="hotel_title">{{x.name}}</h2>
+         
+            
+        <h5> IN :{{x.place}}</h5>
+        <center>
+        <div class="hotel_title_button ml-lg-auto text-lg-right">
+          <!-- <div class="button book_button trans_200"><a href="#">book now <span></span><span></span><span></span></a></div><br> -->
+         <button type="button">Book Now</button><br><br>
+         <!-- <h5>PRICE :{{x.price}}</h5> -->
+        
+
+          <div class="hotel_map_link_container">
+            <!-- <div class="hotel_map_link">See Location on Map</div> -->
+          </div>
+        </div><br>
+         <img src="{{x.image.url}}" height="600" width="1000">
+
+         <br><br><br><br>
+         <p id="p1" class="text-lg-left">we have created a fictional band website.lorem ipsum dolor sit amet,consecteturadipiscing elit,sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua .ut enim ad minim veniam ,quis nostrd exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.duis auteirure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.expcepteur sint occaecat cupidatat non proident,sunt inculpa qui officia desrunt mollit anim id est laborum consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et olore magnaliq.ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
+         <p class="text-lg-left">{{x.description}}</p>
+          </center><br><br>
+
+          <h4>SERVICE : {{x.service}}</h4>
+          <h4>DAYS OF TOUR : {{x.daysoftour}}</h4>
+          <h4>{{x.typeoftour}}</h4>
+          <h4>OPEN BY  : {{x.Otime}} : CLOSED BY :{{x.ctime}}</h4>
+
+           <!-- <div class="button book_button trans_200"><a href="#"> SEE  PACKAGES  </a></div> -->
+           
+          <form action="viewPac" method="POST">
+            {%csrf_token%} 
+          <a href="/viewPac/{{x.id}}/viewPac" >
+<!-- <input type="button" value="View Packages"></a> -->
+
+         <button type="button">See Packages </button></a>
+        </form>      
+     
+      </div>
+      <br><br>
+      
+
+      {% endfor %}
+      <center>
+        
+      <div class="location_on_map">
+        <div class="location_on_map_title">location on map</div>
+
+        <!-- Google Map -->
+
+        <div class="travelix_map">
+          <div id="google_map" class="google_map">
+            <div class="map_container">
+              <div id="map"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </center>
+
+
+
+
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 order-lg-1 order-2  ">
+              <div class="copyright_content d-flex flex-row align-items-center">
+                <div><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+              </div>
+            </div>
+            <div class="col-lg-9 order-lg-2 order-1">
+              <div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
+                <div class="footer_nav">
+                  <ul class="footer_nav_list">
+                    <li class="footer_nav_item"><a href="index.html">home</a></li>
+                    <li class="footer_nav_item"><a href="about.html">about us</a></li>
+                    <li class="footer_nav_item"><a href="offers.html">offers</a></li>
+                    <li class="footer_nav_item"><a href="blog.html">news</a></li>
+                    <li class="footer_nav_item"><a href="contact.html">contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+
+</body>
+</html> 
+

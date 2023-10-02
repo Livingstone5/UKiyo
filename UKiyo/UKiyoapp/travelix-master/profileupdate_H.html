@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="profileupdate_H" method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        <label class="label">Image</label>
+        <input type="file" id="newimage" name="newimage" class="input"><br>
+        <label> New Name of Company</label>
+        <input type="text" id="newname" name="newname"><br><br>
+        <label>Place</label>
+        <input type="text" id="newplace" name="newplace"><br><br>
+        <label>Available Date(opening)</label>
+        <input type="date" id="newdate1" name="newdate1"><br><br>
+        <label>Available Date(closing)</label>
+        <input type="date" id="newdate2" name="newdate2"><br><br>
+        <label for="pac">Choose your Package:</label>
+        <select id="pac" name="newpackage">
+        <option value="1 bed for 2 people">1 bed for 2 people</option>
+        <option value="2 bed for 2 people">2 bed for 2 people</option>
+        <option value="4 bed for 2 people">4 bed for 2 people</option>
+        </select><br><br>
+        <label>Price</label>
+        <input type="number" name="newprice"><br><br>
+        <label>About</label>
+        <input type="text" name="newabout"><br><br>
+        <label>Address</label>
+        <input type="text" name="newaddress"><br><br>
+    
+         <input type="submit" value="Update">
+
+         <p>
+            {{msg1}}<br>
+            </p>  
+    
+        {{errmsg}}
+        <p><a href="{%url 'homepage2'%}"><I>HOME PAGE</I></a></p>
+    </form>
+</body>
+</html> 

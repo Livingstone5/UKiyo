@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restaurant profile</title>
+    <link rel="stylesheet" href="static/css/profile_R.css">
+
+</head>
+<body>
+    {% for x in midata%}
+    
+    <section>
+
+        <div class="box1 box">
+          <div class="content">
+            <div class="image">
+              <img src="{{x.image.url}}" alt="Profile Image">
+            </div><br>
+            <div class="level">
+               <p>cafe</p> 
+            </div>
+            <div class="text">
+              <p class="name"> {{x.name}}
+                
+               </p>
+              <p class="job_title">{{x.place}}</p>
+              <p class="job_discription"></p>ABOUT : {{x.about}}
+              
+              <h5><p class="job_discription">Address : {{x.address}}</p></h5>
+            </div>
+            
+            <div class="button">
+                
+              
+              <div>
+                <form action="profileupdate_R" method="POST">
+                    {%csrf_token%} 
+                <a href="/profileupdate_R/{{x.id}}/profileupdate_R"><button class="connect" type="button">Edit Profile</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+       
+       
+    
+        {% endfor %}
+     
+        
+    
+       
+    </form>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% for x in midata%}
+    <img src="{{x.image.url}}" height="200" width="150">
+    {{x.name}}<br><br>
+    {{x.place}}<br><br>
+    {{x.about}}<br><br>
+    {{x.address}}<br><br>
+
+
+    <form action="profileupdate_R" method="POST">
+        {%csrf_token%} 
+    <a href="/profileupdate_R/{{x.id}}/profileupdate_R" >
+    <input type="button" value="Update"></a>
+    
+
+
+    {% endfor %}
+</form>  
+    
+</body>
+</html> -->

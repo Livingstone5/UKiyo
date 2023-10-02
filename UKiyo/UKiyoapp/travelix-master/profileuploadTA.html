@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="profileuploadTA" method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        <div>
+            <h5>PROFILE DETAILS </h5>
+        <label>Name of Company</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label>Image</label>
+        <input type="file" id="image" name="image"><br><br>
+        <label>Name</label>
+        <input type="text" id="name" name="company"><br><br>
+        <label>Choose your type of service</label>
+        <select id="service" name="service">
+            <option value="Tours">Tours</option>
+            <option value="act">Activities</option>
+            <option value="rent">rentals</option>
+            </select><br><br>
+        <label>Place</label>
+        <input type="text" id="place" name="place"><br><br>
+        <label for="days">Choose your days of tour:</label>
+        <select id="days" name="daysoftour">
+        <option value="one">One day tour</option>
+        <option value="three">Three days of tour</option>
+        <option value="multi">Multi days of tour</option>
+        </select><br><br>
+        <label for="tour">Choose your type of tour:</label>
+        <select id="tour" name="typeoftour">
+        <option value="Private Tours">Private tour</option>
+        <option value="Public Tours">Public tour</option>
+        </select><br><br>
+        <label>Opening time :</label>
+        <input type="time" id="Otime" name="Otime">
+        <label>Closing time :</label>
+        <input type="time" id="ctime" name="ctime">
+        <label>Description :</label>
+        <input type="text" id="description" name="description">
+        
+
+        
+       
+        <input type="submit" name="btn1">Upload<br><br>
+        </form>
+        
+        <form action="displayTA">
+            {% csrf_token %}
+           <a href="displayTA"><input type="submit" value="Display"></a><br>
+         {% for x in midata%}
+         {{x.service}}
+         {{x.place}}
+         {{x.typeoftour}}
+         {{x.daysoftour}}
+         {{x.otime}}
+         {{x.company}}
+
+
+         {% endfor %}
+
+        
+        </div>
+    
+  <button type="submit"><a href="packageupload">Already given the details</a></button>
+  
+
+
+
+
+
+</form> 
+<a href="search">search</a>
+<a href="home">Home Page</a>
+</body>
+</html>
+

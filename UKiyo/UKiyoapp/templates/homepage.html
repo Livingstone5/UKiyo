@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/CSS/home.css">
+</head>
+<body>
+<form action="homepage1" method="POST">
+    {%csrf_token%}
+
+    <div class="banner">
+
+    <div class="navbar">
+        <img src="" class="logo">
+        <ul>
+            <li>home</a></li>
+            <li>explore</a></li>
+            <li><a href="displayPac">Packages</a></li>
+            <li>fav</a></li>
+            <li><a href="packageupload">Your Packages</a></li>
+            <li><a href="profileuploadTA">Account</a></li>
+            <li><a href="books">MY Bookings</a></li>
+
+            </li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>New Traveling Experience</h1>
+        <p>
+            Travel as far as you can, you will find yourself on the way.
+        </p>
+        <div>
+            <button type="button"><span></span><a href="profileuploadTA">Upload</a></button>
+
+            <!-- <button type="button"><span></span><a href="deleteproduct">Delete</a></button>
+            <button type="button"><span></span><a href="productupdate">Update</a></button>
+            <button type="button"><span></span><a href="productupload">Upload</a></button>
+            <button type="button"><span></span><a href="hotelupload">Upload</a></button> -->
+
+        </div>
+    </div>
+</div>
+          
+</form>
+</body>
+</html>
+

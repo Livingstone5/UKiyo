@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SIGN IN PAGE (suppliers)</h1>
+
+    <form action="/signuppage" method="POST">
+        {% csrf_token %}
+       
+        <div class="login-wrap">
+            <div class="login-html">
+                <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign Up as Company</label>
+                <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
+                <div class="login-form">
+                    <div class="sign-in-htm">
+                        <div class="group">
+                            <label for="username" class="label">Username</label>
+                            <input id="username" type="text" class="input" name="username">
+                        </div>
+
+                        <div class="group">
+                            <label for="email" class="label">Email Address</label>
+                            <input id="email" type="text" class="input" name="email">
+                        </div>
+
+                        <div class="group">
+                            <label for="pass" class="label">Password</label>
+                            <input id="pass" type="password" class="input" data-type="password" name="password">
+                        </div>
+                        <!-- <div class="group">
+                            <input id="check" type="checkbox" class="check" checked>
+                            <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                        </div> -->
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign Up">
+                        </div>
+                       
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <a href="signin"><label>Already Member? </a>
+                            <!-- <a href="#"><label>Forgot Password</a> -->
+
+                        </div>
+                    
+				</div>
+                          
+                 
+                </form> 
+                  
+    <form action="/signuppage" method="POST">
+        {% csrf_token %}
+                    
+
+        <div class="sign-up-htm">
+            <div class="group">
+                <label for="user" class="label">Username</label>
+                <input id="user" type="text" class="input" name="username">
+            </div>
+           
+            
+            <div class="group">
+                <label for="email" class="label">Email Address</label>
+                <input id="email" type="text" class="input" name="email">
+            </div>
+           
+            
+            
+            <div class="group">
+                <label for="password1" class="label">Password</label>
+                <input id="password1" type="password" class="input" data-type="password" name="password">
+            </div>
+            
+            <div class="group">
+                <a href="/signup"><input type="submit" class="button" value="Sign Up"></a>
+            </div>
+            <div class="hr"></div>
+            <div class="foot-lnk">
+                <a href="signinpage"><label>Already Member?</a></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                
+                    <link rel="stylesheet"
+            href="static/CSS/signinpage.css">
+                </form>
+</body>
+</html>
+

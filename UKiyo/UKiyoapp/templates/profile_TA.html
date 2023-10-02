@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TA profile</title>
+    <link rel="stylesheet" href="static/css/profile_H.css">
+
+</head>
+<body>
+    {% for x in midata%}
+    
+    <section>
+
+        <div class="box1 box">
+          <div class="content">
+            <div class="image">
+              <img src="{{x.image.url}}" alt="Profile Image">
+            </div><br>
+            <div class="level">
+               <p>Travel Agency</p> 
+            </div>
+            <div class="text">
+              <p class="name"> {{x.name}}
+                
+               </p>
+              <p class="job_title">{{x.place}}</p>
+              
+              
+
+              <p class="job_discription"></p>ABOUT : {{x.about}}
+              
+              <h5><p class="job_discription">Address : {{x.address}}</p></h5>
+              <h5><p class="job_discription">Days of Tour : {{x.daysoftour}}</p></h5>
+              <h5><p class="job_discription">Type of Tour : {{x.typeoftour}}</p></h5>
+
+              <h5><p class="job_discription">OPEN Time : {{x.otime}}CLOSED Time : {{x.ctime}}</p></h5>
+
+            </div>
+            
+            <div class="button">
+                
+              
+              <div>
+                <form action="profileupdate_TA" method="POST">
+                    {%csrf_token%} 
+                <a href="/profileupdate_TA/{{x.id}}/profileupdate_TA"><button class="connect" type="button">Edit Profile</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+       
+       
+    
+        {% endfor %}
+     
+        
+    
+       
+    </form>  
+</body>
+</html>
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="displayTA" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+    {% for x in midata%}
+    <img src="{{x.image.url}}" height="200" width="150">
+    {{x.service}}
+    {{x.daysoftour}}
+    {{x.typeoftour}}
+
+
+</form>
+<form action="deleteprofile_TA" method="POST">
+    {%csrf_token%}
+<a href="/deleteprofile_TA/{{x.id}}" >
+<input type="button" value="Delete"></a>
+<p>
+    {{msg}}
+    </p>  
+
+</form> 
+
+    <form action="profileupdate_TA" method="POST">
+        {%csrf_token%} 
+    <a href="/profileupdate_TA/{{x.id}}/profileupdate_TA" >
+    <input type="button" value="Update"></a>
+    
+
+
+    {% endfor %}
+</form>  
+
+       
+<p>
+{{msg}}<br>
+</p>
+
+</body>
+</html> -->

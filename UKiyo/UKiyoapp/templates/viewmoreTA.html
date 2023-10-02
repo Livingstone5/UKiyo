@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for x in midata%}
+    <img src="{{x.image.url}}" height="200" width="150"><br><br>
+<h1><b>{{x.name}}</b></h1>
+{{x.service}}<br><br>
+{{x.place}}<br><br>
+{{x.daysoftour}}<br><br>
+{{x.typeoftour}}<br><br>
+{{x.otime}}<br><br>
+{{x.ctime}}<br><br>
+{{x.description}}<br>
+
+
+<form action="viewPac" method="POST">
+    {%csrf_token%} 
+<a href="/viewPac/{{x.id}}/viewPac" >
+<input type="button" value="View Packages"></a>
+</form>
+
+
+{% endfor %}
+
+
+
+</body>
+</html>

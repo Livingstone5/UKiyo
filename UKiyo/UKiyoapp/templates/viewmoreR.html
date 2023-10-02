@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view more restaurants</title>
+</head>
+<body>
+    {% for x in midata%}
+    <img src="{{x.image.url}}" height="200" width="150"><br><br>
+<h1><b>{{x.name}}</b></h1>
+{{x.place}}<br><br>
+{{x.phone}}<br><br>
+{{x.website}}<br><br>
+{{x.otime}}
+{{x.ctime}}<br><br>
+{{x.about}}<br>
+{{x.address}}<br>
+
+<form action="viewmenu" method="POST">
+    {%csrf_token%} 
+<a href="/viewmenu/{{x.id}}/viewmenu" >
+<input type="button" value="Menu"></a>
+</form>
+{% endfor %}
+
+</body>
+</html>

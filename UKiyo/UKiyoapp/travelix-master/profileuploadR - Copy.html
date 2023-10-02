@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="profileuploadR" method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        <div>
+            <h5>Restaurant Profile DETAILS </h5>
+        <label>Image</label>
+        <input type="file" name="image"><br><br>
+        <label>Name of your Restaurant</label>
+        <input type="text" name="name"><br><br>
+        <label>Username</label>
+        <input type="text" name="company"><br><br>
+        <label>Place</label>
+        <input type="text" name="place"><br><br>
+        <label>Phone Number</label>
+        <input type="number" name="phone"><br><br>
+        <label>Website</label>
+        <input type="text" name="website"><br><br>
+        <label>Opening Time</label>
+        <input type="time" name="otime"><br><br>
+        <label>Closing Time</label>
+        <input type="time" name="ctime"><br><br>
+        <label>About</label>
+        <input type="text" name="about"><br><br>
+        <label>Address</label>
+        <input type="text" name="address"><br><br>
+
+        <input type="submit" name="Hbtn" value="Upload"><br><br>
+
+  <button type="submit"><a href="homepage2">Already given the details</a></button>
+
+        </div>
+        </form>
+</body>
+</html>
+       
+
+        
+       
+      
+        <form action="displayR">
+            {% csrf_token %}
+           <input type="submit" value="Display"><br>
+         {% for x in midata%}
+         {{x.service}}
+         {{x.place}}
+         {{x.typeoftour}}
+         {{x.daysoftour}}
+         {{x.otime}}
+         {{x.company}}
+
+
+         {% endfor %}
+
+        
+        </div>
+    
+  <button type="submit"><a href="homepage3">Already given the details</a></button>
+  
+
+
+
+
+
+</form> 
+<a href="search">search</a>
+<a href="homepage3">Home Page</a>
+</body>
+</html>
+

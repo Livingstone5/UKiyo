@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PACKAGE UPDATING.......</h1>
+    <form action="packageupdate" method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        <div>
+            <h5>PACKAGE DETAILS </h5>
+        
+        <label>Image</label>
+        <input type="file" name="newimage"><br><br>
+        <label>Title</label>
+        <input type="text" id="newtitle" name="newtitle"><br><br>
+        <label>Name of Travelagency</label>
+        <input type="text" id="newname" name="newname"><br><br>
+        <label>Description</label>
+        <input type="text" id="newdescription" name="newdescription"><br><br>
+        <label>Duration</label>
+        <input type="text" id="newduration" name="newduration"><br><br>
+        <label>meals included or not</label>
+        <select id="newmeals" name="newmeals">
+            <option value="included">meals included</option>
+            <option value="not included">meals not included</option></select><br><br>
+        <label>accommodation included or not</label>
+        <select id="newaccommodation" name="newaccommodation">
+            <option value="included">accommodation included</option>
+            <option value="not included">accommodation not included</option></select><br><br>
+        <label>Place of accommodation</label>
+        <input type="text" id="newplaceofa" name="newplaceofa"><br><br>
+        <label>Available Dates</label>
+        <input type="date" id="newdates" name="newdates"><br><br>
+        <label>Admission fee included or not</label>
+        <select id="newadmission" name="newadmission">
+            <option value="included">Admission fee included</option>
+            <option value="not included ">Admission fee not included</option></select><br><br>
+        <label>Help Number</label>
+        <input type="number" id="newhelpno" name="newhelpno"><br><br>
+        <label>Cancel Date</label>
+        <input type="date" id="newcanceldate" name="newcanceldate"><br><br>
+        <label>Additional Information</label>
+        <input type="text" id="newadditionalinfo" name="newadditionalinfo"><br><br>
+        <label>Starting Point</label>
+        <input type="text" id="newstartpoint" name="newstartpoint"><br><br>
+        <label>Place1</label>
+        <input type="text" id="newplace1" name="newplace1"><br><br>
+        <label>Place2</label>
+        <input type="text" id="newplace2" name="newplace2"><br><br>
+        <label>Place3</label>
+        <input type="text" id="newplace3" name="newplace3"><br><br>
+
+        <input type="submit" name="btn1" value="Update"><br><br>
+    </form>
+    <form action="displayPac">
+        {%csrf_token%}
+        <a href="displayPac"><input type="submit" value="Display"></a><br>
+       
+    </form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="displayRvw" method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        {% for i in rvw %}
+        {{i.review}}
+        <img src="{{i.image.url}}" height="200" width="150">
+    </form>
+
+        <form action="deleteRvw" method="POST">
+            {%csrf_token%}
+        <a href="/deleteRvw/{{i.id}}" >
+        <input type="button" value="Delete"></a>
+        <p>
+            {{msg}}
+            </p>  
+        
+        </form> 
+        {% endfor %}
+
+    <h1>REVIEWS</h1>
+</form>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+body {
+    background:#2d2d2d;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:0;
+    margin:0;
+    height:100vh;
+    width:100vw;
+    font-family: sans-serif;
+    color:#ffffff;
+  }
+  
+  .select {
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    width:700px;
+    height:40px;
+  }
+  
+  .option {
+    padding:0 30px 0 10px;
+    min-height:40px;
+    display:flex;
+    align-items:center;
+    background: #000000;;
+    border-top:#000000 solid 1px;
+    position:absolute;
+    top:0;
+    width: 100%;
+    pointer-events:none;
+    order:2;
+    z-index:1;
+    transition:background .4s ease-in-out;
+    box-sizing:border-box;
+    overflow:hidden;
+    white-space:nowrap;
+    
+  } 
+  
+.option:hover {
+  background: #56d8e4;
+  } 
+  
+  .select:focus .option {
+    position:relative;
+    pointer-events:all;
+  }    
+  
+  button{
+    opacity:0; 
+    position:absolute;
+    left:-99999px; 
+  } 
+    button:checked + label {
+    order: 1;
+    z-index:2;
+    background: #000000;;
+    border-top:none;
+    position:relative;
+  } 
+  
+  button:checked + label:after {
+    content:'';
+    width: 0; 
+      height: 0; 
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid white;
+    position:absolute;
+    right:10px;
+    top:calc(50% - 2.5px);
+    pointer-events:none;
+    z-index:3;
+  }
+   
+  button:checked + label:before {
+    position:absolute;
+    right:0;
+    height: 400px;
+    width: 400px;
+    content: '';
+    background: #000000;;
+  } 
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSE
+* ==========================================
+*
+*/
+body {
+  background: #e8cbc0;
+  background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
+  background: linear-gradient(to right, #e8cbc0, #636fa4);
+  min-height: 100vh;
+}
+
+.bootstrap-select .bs-ok-default::after {
+  width: 0.3em;
+  height: 0.6em;
+  border-width: 0 0.1em 0.1em 0;
+  transform: rotate(45deg) translateY(0.5rem);
+}
+
+.btn.dropdown-toggle:focus {
+  outline: none !important;
+}
+

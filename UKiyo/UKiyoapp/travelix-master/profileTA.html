@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="displayTA" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+    {% for x in midata%}
+    <img src="{{x.image.url}}" height="200" width="150">
+    {{x.service}}
+    {{x.daysoftour}}
+    {{x.typeoftour}}
+
+
+</form>
+<form action="deleteprofile_TA" method="POST">
+    {%csrf_token%}
+<a href="/deleteprofile_TA/{{x.id}}" >
+<input type="button" value="Delete"></a>
+<p>
+    {{msg}}
+    </p>  
+
+</form> 
+
+    <form action="profileupdate_TA" method="POST">
+        {%csrf_token%} 
+    <a href="/profileupdate_TA/{{x.id}}/profileupdate_TA" >
+    <input type="button" value="Update"></a>
+    
+
+
+    {% endfor %}
+</form>  
+
+       
+<p>
+{{msg}}<br>
+</p>
+
+</body>
+</html>

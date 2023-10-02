@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>viewmore hotels</title>
+</head>
+<body>
+    {% for x in midata%}
+    <img src="{{x.image.url}}" height="200" width="150">
+    <br><br>
+    <h1><b>{{x.name}}</b></h1>
+    {{x.place}}<br><br>
+    {{x.phone}}<br><br>
+    {{x.date1}}<br><br>
+    {{x.date2}}
+    {{x.package}}<br><br>
+    {{x.price}}<br>
+    {{x.address}}<br>
+    {% endfor %}
+    
+</body>
+</html>

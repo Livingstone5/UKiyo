@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="static/css/homee.css">
+    <!-- <link rel="stylesheet" href="static/css/homee.css"> -->
+
+
+    
+</head>
+
+<body>
+   
+    <div class="banner">
+    <div class="navbar">
+
+        <a class="nav-link nav-link-ltr" href="#">Home</a>
+        <a class="nav-link nav-link-ltr" href="cart/{{applicant.id}}">cart</a>
+        <a class="nav-link nav-link-ltr" href="#">Favourites</a>
+        <a class="nav-link nav-link-ltr" href="displayuser">Account</a>
+        <a class="nav-link nav-link-ltr" href="reviewupload">Blog</a>
+
+        <!-- <a class="nav-link nav-link-ltr" href="reviewpagehome">Blog</a> -->
+        <!-- <a class="nav-link nav-link-ltr" href="userprofile">Account</a> -->
+    </div><br><br>
+</div>
+<div>
+    <a href="search_TA"><button type="button">Tours And Travels</button></a>
+    <a href="search_H"><button type="button">Hotels</button></a>
+    <a href="search_R"><button type="button">Restaurants</button></a>
+    <a href="search_rvw"><button type="button">Reviews</button></a>
+
+    
+
+</div>
+<div class="row">
+    <div class="col-md-3 col-sm-6">
+<div class="product-grid">
+<div class="product-image">
+    <a href="#" class="image">
+        <img class="pic-1" src="static/CSS/night_steert.jpg" width="50px" height="10px">
+    </a>
+    <span class="product-discount-label">-33%</span>
+    <ul class="product-links">
+        <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
+        <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+        <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+    </ul>
+</div>
+<div class="product-content">
+    
+    <h3 class="title"><a href="#"></a></h3>
+    <h3 class="title"><a href="#"></a></h3>
+    <h3 class="title"><a href="#"></a></h3>
+    <div class="price"><span></span></div>
+    <a class="add-to-cart" href="#">add to cart</a>
+</div>
+</div>
+</div>
+ {% for x in data%}
+ 
+<div class="col-md-3 col-sm-6">
+<div class="product-grid">
+<div class="product-image">
+    <a href="#" class="image">
+    <img src="{{x.image.url}}" height="200" width="150">
+        
+    </a>
+    <ul class="product-links">
+        <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
+        <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+        <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+    </ul>
+</div>
+<div class="product-content">
+     
+   
+    <h3 class="title"><a href="#">{{x.name}}</a></h3>
+    <h3 class="title"><a href="#">{{x.place}}</a></h3>
+    <h3 class="title"><a href="#">{{x.service}}</a></h3>
+    <h3 class="title"><a href="#">{{x.typeoftour}}</a></h3>
+    
+    <div class="price"></div>
+    <form action="viewmore_TA" method="POST">
+        {%csrf_token%} 
+    <a href="/viewmore_TA/{{x.id}}/viewmore_TA" >
+    <input type="button" value="View More"></a>
+    </form>
+   
+</div>
+</div>
+</div>
+</div>
+{% endfor %}  
+
+{% for x in hotels%}
+<div class="col-md-3 col-sm-6">
+<div class="product-grid">
+<div class="product-image">
+    <a href="#" class="image">
+    <img src="{{x.image.url}}" height="200" width="150">
+        
+    </a>
+    <ul class="product-links">
+        <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
+        <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+        <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+    </ul>
+</div>
+<div class="product-content">
+     
+   
+    <h3 class="title"><a href="#">{{x.name}}</a></h3>
+    <h3 class="title"><a href="#">{{x.place}}</a></h3>
+    <h3 class="title"><a href="#">{{x.price}}</a></h3>
+    
+    <div class="price"></div>
+    <form action="viewmore_H" method="POST">
+        {%csrf_token%} 
+    <a href="/viewmore_H/{{x.id}}/viewmore_H" >
+    <input type="button" value="View More"></a>
+    </form>
+   
+</div>
+</div>
+</div>
+</div>
+{% endfor %} 
+
+{% for x in rsts %}
+<div class="col-md-3 col-sm-6">
+<div class="product-grid">
+<div class="product-image">
+    <a href="#" class="image">
+    <img src="{{x.image.url}}" height="200" width="150">
+        
+    </a>
+    <ul class="product-links">
+        <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
+        <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+        <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+    </ul>
+</div>
+<div class="product-content">
+     
+   
+    <h3 class="title"><a href="#">{{x.name}}</a></h3>
+    <h3 class="title"><a href="#">{{x.place}}</a></h3>
+    <h3 class="title"><a href="#">{{x.price}}</a></h3>
+    
+    <div class="price"></div>
+    <form action="viewmore_R" method="POST">
+        {%csrf_token%} 
+    <a href="/viewmore_R/{{x.id}}/viewmore_R" >
+    <input type="button" value="View More"></a>
+    </form>
+   
+</div>
+</div>
+</div>
+</div>
+{% endfor %} 
+
+{% for x in pacs %}
+<div class="col-md-3 col-sm-6">
+<div class="product-grid">
+<div class="product-image">
+    <a href="#" class="image">
+    <img src="{{x.image.url}}" height="200" width="150">
+        
+    </a>
+    <ul class="product-links">
+        <li><a href="#" data-tip="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
+        <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
+        <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+    </ul>
+</div>
+<div class="product-content">
+     
+   
+    <h3 class="title"><a href="#">{{x.name}}</a></h3>
+    <h3 class="title"><a href="#">{{x.place}}</a></h3>
+    <h3 class="title"><a href="#">{{x.price}}</a></h3>
+    
+    <div class="price"></div>
+    <form action="viewmore_Pac" method="POST">
+        {%csrf_token%} 
+    <a href="/viewmore_Pac/{{x.id}}/viewmore_Pac" >
+    <input type="button" value="View More"></a>
+    </form>
+    
+    <form action="addtocart" method="POST">
+    {%csrf_token%}
+    <a href="/addtocart/{{x.id}}" >
+    <input type="button" value="Add to Cart"></a>
+    </form>
+
+            <a href="book/bookhome/{{x.id}}">
+            <input type="button" value="Book now"></a>
+        
+</div>
+</div>
+</div>
+</div>
+{% endfor %}
+</body>
+</html>

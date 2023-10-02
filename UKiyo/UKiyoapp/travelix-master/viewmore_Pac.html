@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view more packages</title>
+</head>
+<body>
+    {% for x in midata%}
+    <img src="{{x.image.url}}" height="200" width="150"><br><br>
+    <h1><b>{{x.name}}</b></h1>
+    {{x.placeofa}}<br><br>
+    {{x.description}}<br><br>
+    {{x.duration}}<br><br>
+    {{x.meals}}
+    {{x.dates}}<br><br>
+    {{x.helpno}}<br>
+    {{x.additionalinfo}}<br>
+    {% endfor %}
+</body>
+</html>

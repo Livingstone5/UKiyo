@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/CSS/indexpage.css">
+</head>
+<body>
+    <div class="content">
+    <p>INDEX PAGE OF SUPPLIERS</p>
+    <p>Select Your Enterprise Type</p> 
+</div>
+    <form action="indexpage" method="POST">
+        {%csrf_token%}
+        <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+
+        
+        
+<div id="btn"><a href="homepage1"> Travel Agency</a><span></span><div id="circle"></div></div><br>
+<div id="btn"><a href="homepage2"> Hotels </a><span></span><div id="circle"></div></div><br>
+<div id="btn"><a href="homepage3">Restaurants </a><span></span><div id="circle"></div></div><br>
+
+    </form>
+</body>
+</html>

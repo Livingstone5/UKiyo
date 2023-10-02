@@ -1,0 +1,87 @@
+{% extends 'partials/base.html' %}
+{% block content %}
+  
+
+
+            <style>
+                .row {
+                    margin-top: 40px;
+                    
+                }
+
+                p
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 2;
+	font-weight: 400;
+	color: #000000;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+
+h1{font-size: 48px; font-weight: 600; margin-left: 40px;}
+h2{font-size: 36px; font-weight: 600; margin-left: 40px;}
+h3{font-size: 24px;}
+/* h4{font-size: 18px;} */
+h5{font-size: 14px;}
+h1, h2, h3, h5, h6
+{
+	font-family: 'Open Sans', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+h4{
+  margin-left: 60px;
+  font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	line-height: 2;
+	font-weight: 600;
+	color: #131212;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+h5{
+ 
+  font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	line-height: 2;
+  font-weight: 600;
+  
+	color: #0e0d0d;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+                
+            </style>
+             <center> <h2>TRAVEL AGENCIES </h2></center>
+            <br><br>
+          
+            {% for data in data %}
+            <div class="container">
+                <div class="row">
+            <img src="{{data.image.url}}" height="200" width="300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- </a>
+        
+    </div>
+     -->
+       <div class="column">
+        <h3>{{ data.name }}</h3>
+        <h5 >{{ data.place }}</h5>
+        <h6> TYPE OF TOUR : {{ data.typeoftour }}</h6>
+        <h7>DAYS OF TOUR : {{ data.daysoftour }}</h7>
+    </div>
+    </div> 
+    </div>
+    </div>
+    </div>
+    </div>
+</div></div>
+    {% endfor %}
+{% endblock  %}
+
+

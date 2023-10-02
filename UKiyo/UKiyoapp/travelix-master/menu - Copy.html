@@ -1,0 +1,35 @@
+<!-- {%load static%} -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for x in midata %}
+    <form action="displaymenu">
+    <img src="{{x.image.url}}" height="200" width="150">
+    {{x.name}}
+    {{x.description}}
+    {{x.price}}
+
+    <form action="menuupdate" method="POST">
+        {%csrf_token%} 
+    <a href="/menuupdate/{{x.id}}/menuupdate" >
+    <input type="button" value="Update"></a><br><br>
+    </form>
+
+    <form action="deletemenu" method="POST">
+        {%csrf_token%}
+    <a href="/deletemenu/{{x.id}}" >
+    <input type="button" value="Delete"></a>
+    <p>
+        {{msg}}
+        </p>  
+    
+    </form> 
+    {% endfor %}
+</form>
+</body>
+</html>

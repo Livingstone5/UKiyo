@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% for x in midata%}
+    <img src="{{x.image.url}}" height="200" width="150">
+    {{x.name}}<br><br>
+    {{x.place}}<br><br>
+    {{x.about}}<br><br>
+    {{x.address}}<br><br>
+
+
+    <form action="profileupdate_R" method="POST">
+        {%csrf_token%} 
+    <a href="/profileupdate_R/{{x.id}}/profileupdate_R" >
+    <input type="button" value="Update"></a>
+    
+
+
+    {% endfor %}
+</form>  
+    
+</body>
+</html>

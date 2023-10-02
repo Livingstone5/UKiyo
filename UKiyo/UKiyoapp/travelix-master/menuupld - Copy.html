@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="menuupload" method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        <div>
+            <h5>MENU DETAILS </h5>
+        <label>Name of Dish</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label>Image</label>
+        <input type="file" name="image"><br><br>
+        <label>Username </label>
+        <input type="text" id="name" name="company"><br><br>
+        <label>Name of your Restaurant </label>
+        <input type="text" id="name" name="restaurant"><br><br>
+        <label>Descriptipon of the Dish</label>
+        <input type="text" id="name" name="description"><br><br>
+        <label>Price of the Dish </label>
+        <input type="text" id="name" name="price"><br><br>
+
+        <input type="submit" name="Hbtn" value="Upload"><br><br>
+
+  <button type="submit"><a href="homepage3">Already given the details</a></button>
+
+        </div>
+        </form>
+        
+
+</body>
+</html>

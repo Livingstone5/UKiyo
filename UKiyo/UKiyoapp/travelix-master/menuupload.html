@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" type="text/css" href="hotelform.css">
+
+
+<style>
+   
+    body {
+   margin:0px;
+   height:150vh;
+   background: #000000;
+ }
+ .center {
+   height:100%;
+   border-radius: 20px;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+ 
+ }
+ .form-input {
+   width:600px;
+   border-radius: 50px;
+
+ 
+   /* padding:20px; */
+   background: #000000;;
+   box-shadow: -3px -3px 7px rgba(94, 104, 121, 0.377),
+               3px 3px 7px rgba(94, 104, 121, 0.377);
+ }
+ .form-input input {
+   display:none;
+ 
+ }
+ .form-input label {
+   display:block;
+   width:45%;
+   height:45px;
+   margin-left: 25%;
+   line-height:50px;
+   text-align:center;
+   background: #000000;;
+ 
+   color:#fff;
+   font-size:15px;
+   font-family:"Open Sans",sans-serif;
+   text-transform:Uppercase;
+   font-weight:600;
+   border-radius:5px;
+   cursor:pointer;
+ }
+ 
+ .form-input img {
+   width:90%;
+   
+   display:none;
+   margin-top: 20px;
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-bottom:20px;
+ }
+ 
+    
+   </style>
+
+</head>
+<body>
+    <form action="menuupload" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+
+<link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' rel='stylesheet'>
+<link href='' rel='stylesheet'>
+<style>body {
+background-image: linear-gradient(to right, #000000, #000000)
+}
+
+.section {
+position: relative;
+height: 100vh;
+}
+
+.section .section-center {
+position: absolute;
+top: 50%;
+left: 0;
+right: 0;
+-webkit-transform: translateY(-50%);
+transform: translateY(-50%);
+}
+
+#booking {
+font-family: 'Raleway', sans-serif;
+}
+
+.booking-form {
+position: relative;
+max-width: 642px;
+width: 100%;
+margin: auto;
+padding: 40px;
+overflow: hidden;
+background-image: url('https://i.imgur.com/8z1tx3u.jpg');
+background-size: cover;
+border-radius: 5px;
+z-index: 20;
+}
+
+.booking-form::before {
+content: '';
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+top: 0;
+background: rgba(0, 0, 0, 0.7);
+z-index: -1;
+}
+
+.booking-form .form-header {
+text-align: center;
+position: relative;
+margin-bottom: 30px;
+}
+
+.booking-form .form-header h1 {
+font-weight: 700;
+text-transform: capitalize;
+font-size: 42px;
+margin: 0px;
+color: #fff;
+}
+
+.booking-form .form-group {
+position: relative;
+margin-bottom: 30px;
+}
+
+.booking-form .form-control {
+background-color: rgba(255, 255, 255, 0.2);
+height: 60px;
+padding: 0px 25px;
+border: none;
+border-radius: 40px;
+color: #fff;
+-webkit-box-shadow: 0px 0px 0px 2px transparent;
+box-shadow: 0px 0px 0px 2px transparent;
+-webkit-transition: 0.2s;
+transition: 0.2s;
+}
+
+.booking-form .form-control::-webkit-input-placeholder {
+color: rgba(255, 255, 255, 0.5);
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+color: rgba(255, 255, 255, 0.5);
+}
+
+.booking-form .form-control::placeholder {
+color: rgba(255, 255, 255, 0.5);
+}
+
+.booking-form .form-control:focus {
+-webkit-box-shadow: 0px 0px 0px 2px #ff8846;
+box-shadow: 0px 0px 0px 2px #ff8846;
+}
+
+.booking-form input[type="date"].form-control {
+padding-top: 16px;
+}
+
+.booking-form input[type="date"].form-control:invalid {
+color: rgba(255, 255, 255, 0.5);
+}
+
+.booking-form input[type="date"].form-control+.form-label {
+opacity: 1;
+top: 10px;
+}
+
+.booking-form select.form-control {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}
+
+.booking-form select.form-control:invalid {
+color: rgba(255, 255, 255, 0.5);
+}
+
+.booking-form select.form-control+.select-arrow {
+position: absolute;
+right: 15px;
+top: 50%;
+-webkit-transform: translateY(-50%);
+transform: translateY(-50%);
+width: 32px;
+line-height: 32px;
+height: 32px;
+text-align: center;
+pointer-events: none;
+color: rgba(255, 255, 255, 0.5);
+font-size: 14px;
+}
+
+.booking-form select.form-control+.select-arrow:after {
+content: '\279C';
+display: block;
+-webkit-transform: rotate(90deg);
+transform: rotate(90deg);
+}
+
+.booking-form select.form-control option {
+color: #000;
+}
+
+.booking-form .form-label {
+position: absolute;
+top: -10px;
+left: 25px;
+opacity: 0;
+color: #ff8846;
+font-size: 11px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 1.3px;
+height: 15px;
+line-height: 15px;
+-webkit-transition: 0.2s all;
+transition: 0.2s all;
+}
+
+.booking-form .form-group.input-not-empty .form-control {
+padding-top: 16px;
+}
+
+.booking-form .form-group.input-not-empty .form-label {
+opacity: 1;
+top: 10px;
+}
+
+.booking-form .submit-btn {
+color: #fff;
+background-color: #e35e0a;
+font-weight: 700;
+height: 60px;
+padding: 10px 30px;
+width: 100%;
+border-radius: 40px;
+border: none;
+text-transform: uppercase;
+font-size: 16px;
+letter-spacing: 1.3px;
+-webkit-transition: 0.2s all;
+transition: 0.2s all;
+}
+
+.booking-form .submit-btn:hover,
+.booking-form .submit-btn:focus {
+opacity: 0.9;
+}</style>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+<script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js'></script>
+<script type='text/javascript'></script> 
+<div id="booking" class="section">
+<div class="section-center">
+<div class="container">
+<div class="row">
+<div class="booking-form">
+<div class="form-header">
+<h1>Make your reservation</h1>
+</div>
+<form>
+<div class="form-group">
+<input class="form-control" name="name" type="text" placeholder="NAME OF DISH">
+<span class="form-label">Destination</span>
+</div>
+<div class="form-group">
+    <input class="form-control" name="company" type="text" placeholder="USERNAME ">
+    <span class="form-label">Destination</span>
+    </div>
+    <div class="form-group">
+        <input class="form-control" name="restaurant" type="text" placeholder="NAME OF RESTAURANT">
+        <span class="form-label">Destination</span>
+        </div>
+        <div class="form-group">
+            <!-- <input class="form-control" type="text" placeholder="NAME OF DISH"> -->
+            <textarea class="form-control" name="description" placeholder="DESCRIPTION OF DISH"></textarea>
+            <span class="form-label">Destination</span>
+            </div>
+            <div class="form-group">
+                <!-- <input class="form-control" type="text" placeholder="NAME OF DISH"> -->
+                <textarea class="form-control" name="price" placeholder="PRICE OF DISH"></textarea>
+                <span class="form-label">Destination</span>
+                </div>
+
+
+
+
+
+<div class="center">
+    <div class="form-input">
+      <div class="preview">
+        <img id="file-ip-1-preview">
+      </div>
+      <label for="file-ip-1">Upload Image</label>
+      <input type="file" name="image" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+      
+    </div>
+  </div> 
+  <script type="text/javascript">
+    function showPreview(event){
+    if(event.target.files.length > 0){
+      var src = URL.createObjectURL(event.target.files[0]);
+      var preview = document.getElementById("file-ip-1-preview");
+      preview.src = src;
+      preview.style.display = "block";
+    }
+  }
+  </script>
+
+
+
+
+
+
+
+
+
+<div class="form-btn">
+<button class="submit-btn">Book Now</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div> 
+<a target="_blank" href="https://gosnippets.com" class="white-mode">MORE</a>
+
+
+    </form>
+</body>
+</html>
+

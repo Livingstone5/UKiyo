@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restaurant profile</title>
+    <link rel="stylesheet" href="static/css/profile_H.css">
+
+</head>
+<body>
+    {% for x in midata%}
+    
+    <section>
+
+        <div class="box1 box">
+          <div class="content">
+            <div class="image">
+              <img src="{{x.image.url}}" alt="Profile Image">
+            </div><br>
+            <div class="level">
+               <p>cafe</p> 
+            </div>
+            <div class="text">
+              <p class="name"> {{x.name}}
+                
+               </p>
+              <p class="job_title">{{x.place}}</p>
+              
+              
+
+              <p class="job_discription"></p>ABOUT : {{x.aboutofhotel}}
+              
+              <h5><p class="job_discription">Address : {{x.address}}</p></h5>
+              <h5><p class="job_discription">Package : {{x.package}}</p></h5>
+              <h5><p class="job_discription">Price : {{x.price}}</p></h5>
+
+              <h5><p class="job_discription">OPEN Date : {{x.date1}}CLOSED Date : {{x.date2}}</p></h5>
+
+            </div>
+            
+            <div class="button">
+                
+              
+              <div>
+                <form action="profileupdate_H" method="POST">
+                    {%csrf_token%} 
+                <a href="/profileupdate_H/{{x.id}}/profileupdate_H"><button class="connect" type="button">Edit Profile</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+       
+       
+    
+        {% endfor %}
+     
+        
+    
+       
+    </form>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% for x in midata%}
+    <img src="{{x.image.url}}" height="200" width="150">
+    {{x.name}}
+    {{x.service}}
+    {{x.daysoftour}}
+    {{x.typeoftour}}
+
+    
+    <form action="profileupdate_H" method="POST">
+        {%csrf_token%} 
+    <a href="/profileupdate_H/{{x.id}}/profileupdate_H" >
+    <input type="button" value="Update"></a>
+    
+
+
+    {% endfor %}
+</form>  
+    
+</body>
+</html> -->

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/userprofile.css">
+
+</head>
+<body>
+    
+    <section>
+
+        <div class="box1 box">
+          <div class="content">
+            <div class="image">
+              <img src="https://i.postimg.cc/bryMmCQB/profile-image.jpg" alt="Profile Image">
+            </div>
+            <div class="level">
+              <p>PRO</p>
+            </div>
+            <div class="text">
+              <p class="name"> {{user.username}}
+                
+               </p>
+              <p class="job_title">{{user.email}}</p>
+              <p class="job_discription">Share a little about yourself so other travellers can get to know you !</p>
+              <h5><p class="job_discription">Location : No location added</p></h5>
+            </div>
+            
+            <div class="button">
+                
+              
+              <div>
+                <form action="userprofileupdate" method="POST">
+                    {%csrf_token%} 
+                <a href="/userprofileupdate/{{user.id}}/userprofileupdate"><button class="connect" type="button">Edit Profile</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+       
+       
+    
+    
+       
+    </form>  
+</body>
+</html>

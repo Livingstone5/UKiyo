@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="profileupdate_TA" method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+
+        <label> New Name of Company</label>
+        <input type="text" id="newname" name="newname"><br><br>
+        <label class="label">Image</label>
+        <input type="file" id="newimage" name="newimage" class="input"><br>
+        <label>Choose your type of service</label>
+        <select id="newservice" name="newservice">
+            <option value="Tours">Tours</option>
+            <option value="act">Activities</option>
+            <option value="rent">rentals</option>
+            </select><br><br>
+        <label>Place</label>
+        <input type="text" id="newplace" name="newplace"><br><br>
+        <label for="days">Choose your days of tour:</label>
+        <select id="days" name="newdaysoftour">
+        <option value="one">One day tour</option>
+        <option value="three">Three days of tour</option>
+        <option value="multi">Multi days of tour</option>
+        </select><br><br>
+        <label for="tour">Choose your type of tour:</label>
+        <select id="tour" name="newtypeoftour">
+        <option value="pri">Private tour</option>
+        <option value="pub">Public tour</option>
+        </select><br><br>
+        <label>opening time :</label>
+        <input type="text" id="newotime" name="newotime">
+        <label>closing time :</label>
+        <input type="text" id="newctime" name="newctime">
+        <label> New Description</label>
+        <input type="text" id="newdescription" name="newdescription"><br><br>
+    
+         <input type="submit" value="Update">
+
+         <p>
+            {{msg}}<br>
+            </p>  
+    
+        {{errmsg}}
+        <p><a href="{%url 'homepage1'%}"><I>HOME PAGE</I></a></p>
+    </form>
+</body>
+</html> 

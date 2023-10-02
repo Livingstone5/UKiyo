@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="menuupdate" method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        <div>
+            <h5>MENU UPDATING.... </h5>
+        <label>Name of Dish</label>
+        <input type="text" id="newname" name="newname"><br><br>
+        <label>Image</label>
+        <input type="file" name="newimage"><br><br>
+        <label>Descriptipon of the Dish</label>
+        <input type="text" id="newdescription" name="newdescription"><br><br>
+        <label>Price of the Dish </label>
+        <input type="text" id="newprice" name="newprice"><br><br>
+
+        <input type="submit" name="Hbtn" value="Update"><br><br>
+
+  <button type="submit"><a href="homepage3">Already given the details</a></button>
+
+        </div>
+        </form>
+</body>
+</html>
